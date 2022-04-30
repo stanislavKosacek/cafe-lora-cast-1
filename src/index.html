@@ -9,17 +9,17 @@
     <title>Café Lóra</title>
   </head>
   <body>
-    <section class="banner">
+    <section id="home" class="banner">
       <header>
         <div class="topbar container">
           <div class="site-logo"></div>
           <div class="navigation">
             <button id="nav-btn" class="nav-btn"></button>
             <nav class="nav-closed">
-              <a href="#">domů</a>
-              <a href="#">menu</a>
-              <a href="#">galerie</a>
-              <a href="#">kontakt</a>
+              <a href="#home">domů</a>
+              <a href="#menu">menu</a>
+              <a href="#gallery">galerie</a>
+              <a href="#contact">kontakt</a>
             </nav>
           </div>
         </div>
@@ -32,7 +32,7 @@
       </div>
     </section>
 
-    <section class="menu">
+    <section id="menu" class="menu">
       <div class="container">
         <h2>Naše nabídka</h2>
         <p class="menu-intro">
@@ -43,7 +43,9 @@
           <div class="drink">
             <div class="drink__product">
               <div class="drink__cup">
-                <img src="https://apps.kodim.cz/daweb/cafelora/assets/cups/cappuccino.png" />
+                <img
+                  src="https://apps.kodim.cz/daweb/cafelora/assets/cups/cappuccino.png"
+                />
               </div>
               <div class="drink__info">
                 <h3>Cappuccino</h3>
@@ -79,9 +81,18 @@
       </div>
     </section>
 
-    <section class="gallery"></section>
+    <section id="gallery" class="gallery">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, est
+        quas, exercitationem voluptatibus, quos iste consequuntur sed eligendi
+        magnam earum unde animi voluptatum et iusto incidunt suscipit excepturi
+        totam! Dolorem ea facilis reiciendis necessitatibus aut assumenda
+        deleniti quam, ex, ipsa voluptatem eligendi nihil quisquam doloremque
+        dolores consectetur eveniet iste natus!
+      </p>
+    </section>
 
-    <section>
+    <section id="contact">
       <div class="container">
         <h2>Kde nás najdete</h2>
         <div class="contacts">
@@ -90,7 +101,10 @@
             514 03 Byšky nad Jizerou <br />
             Tel: +420 775 334 427
           </div>
-          <img src="https://apps.kodim.cz/daweb/cafelora/assets/map.png" class="contacts__map" />
+          <img
+            src="https://apps.kodim.cz/daweb/cafelora/assets/map.png"
+            class="contacts__map"
+          />
         </div>
       </div>
     </section>
