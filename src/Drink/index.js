@@ -1,7 +1,8 @@
 import { Layer } from '../Layer/index.js';
 import './style.css';
 export const Drink = (props) => {
-  const { id, name, ordered, image, layers } = props;
+  const { id, name, image, layers } = props;
+  let { ordered } = props;
   const element = document.createElement('div');
   element.classList.add('drink');
 
@@ -24,6 +25,20 @@ export const Drink = (props) => {
   const drinkInfoElm = element.querySelector('.drink__info');
   layers.forEach((layer) => {
     drinkInfoElm.innerHTML += Layer(layer);
+  });
+
+  const orderBtnElm = element.querySelector('.order-btn');
+  orderBtnElm.addEventListener('click', () => {
+    const drinkCupElm = element.querySelector('.drink__cup');
+    if (!ordered) {
+      orderBtnElm.textContent = 'Zrušit';
+      drinkCupElm.classList.add('drink__cup--selected');
+      ordered = true;
+    } else {
+      orderBtnElm.textContent = 'Objednat';
+      drinkCupElm.classList.remove('drink__cup--selected');
+      ordered = false;
+    }
   });
 
   return element;
